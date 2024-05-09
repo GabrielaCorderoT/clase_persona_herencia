@@ -48,20 +48,22 @@ namespace clase_persona_herencia
 
     //clase hija 
     //creamos una clase pública para alumno
-    public class Alumno
+      public class Alumno:Persona
     {
         //creamos un string para nombre y fecha de nacimiento porque es un elemento de texto
         //creamos un elemento int para edad porque es un elemento numérico
         //utilizamos get y set para que tome los datos y los devuelva
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
+        public string Carrera_puesto { get; set; }
+        public int DNI_matricula { get; set; }
 
-        public string Fechanacimiento { get; set; }
-        public Alumno(string nombre, int edad, string fechanacimiento)
+        public Alumno(string nombre, int edad, string fechanacimiento, string carrera_puesto, int dni_matricula)
         {
             Nombre = nombre;
             Edad = edad;
             Fechanacimiento = fechanacimiento;
+            Carrera_puesto = carrera_puesto;
+            DNI_matricula = dni_matricula;
+           
         }
 
         //este comando nos permite mostrar la información solicitada
@@ -73,22 +75,26 @@ namespace clase_persona_herencia
 
     //clase hija
     //creamos una clase pública para empleado
-    public class Empleado
+    public class Empleado:Persona
     {
         //creamos un string para nombre y fecha de nacimiento porque es un elemento de texto
         //creamos un elemento int para edad porque es un elemento numérico
         //utilizamos get y set para que tome los datos y los devuelva
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
 
-        public string Fechanacimiento { get; set; }
-        public Empleado(string nombre, int edad, string fechanacimiento)
+        public string Carrera_puesto { get; set; }
+        public int DNI_matricula { get; set; }
+
+        public int Sueldo { get; set; }
+
+        public  Empleado(string nombre, int edad, string fechanacimiento, string carrera_puesto, int dni_matricula, int sueldo)
         {
             Nombre = nombre;
             Edad = edad;
             Fechanacimiento = fechanacimiento;
+            Carrera_puesto = carrera_puesto;
+            DNI_matricula = dni_matricula;
+            Sueldo = sueldo;
         }
-
         //este comando nos permite mostrar la información solicitada
         public void MostarInformacion()
         {
@@ -98,20 +104,24 @@ namespace clase_persona_herencia
 
     //clase hija
     //creamos una clase pública para docente
-    public class Docente
+    public class Docente:Persona                                         
     {
         //creamos un string para nombre y fecha de nacimiento porque es un elemento de texto
         //creamos un elemento int para edad porque es un elemento numérico
         //utilizamos get y set para que tome los datos y los devuelva
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
+        public string Carrera_puesto { get; set; }
+        public int DNI_matricula { get; set; }
 
-        public string Fechanacimiento { get; set; }
-        public Docente(string nombre, int edad, string fechanacimiento)
+        public int Sueldo { get; set; }
+
+        public Docente(string nombre, int edad, string fechanacimiento, string carrera_puesto, int dni_matricula, int sueldo)
         {
             Nombre = nombre;
             Edad = edad;
             Fechanacimiento = fechanacimiento;
+            Carrera_puesto = carrera_puesto;
+            DNI_matricula = dni_matricula;
+            Sueldo = sueldo;
         }
 
         //este comando nos permite mostrar la información solicitada
